@@ -5,12 +5,22 @@ require "./parser"
 
 use Rack::Deflater
 
+error 400 do
+	'Wrong params'
+end
+
+
 get '/' do
 
 	url = params["url"]
-	p = Parser.new(url)
 
-	json( :response => p.parsed )
+	if ( url.nil?)
+		json( :error => "400" )
+	else
+		p = Parser.new(url)
 
+		json( :response => p.parsed )
+	end
 end
+
 
