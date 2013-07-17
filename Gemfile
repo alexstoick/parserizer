@@ -6,6 +6,4 @@ gem 'sinatra-contrib'
 
 gem 'multi_json'
 
-require 'readability'
-
-require 'open-uri'
+gem 'ruby-readability'
