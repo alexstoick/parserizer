@@ -10,4 +10,4 @@ gem 'multi_json'
 
 gem 'ruby-readability'
 
-gem 'thin'
+gem 'unicorn'
