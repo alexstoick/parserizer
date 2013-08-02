@@ -1,5 +1,5 @@
 timeout 30
-worker_processes 2
+worker_processes 5
 preload_app true
 
 before_exec do |server|
