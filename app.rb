@@ -23,7 +23,7 @@ class Parserizer < Sinatra::Base
 		else
 			p = Parser.new(url)
 
-			{ :response => p.parsed }.to_json
+			{ :response => p.parsed , :url => url }.to_json
 		end
 	end
 
