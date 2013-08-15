@@ -6,8 +6,12 @@ class Parser
 	attr_accessor :parsed
 
 	def initialize( url )
-		source = open( url ).read
-		@parsed = Readability::Document.new(source).content
+		begin
+			source = open( url ).read
+			@parsed = Readability::Document.new(source).content
+		rescue Exception => e
+			puts e.message
+		end
 	end
 
 end
