@@ -21,7 +21,7 @@ class Parserizer < Sinatra::Base
 			if ( p.parsed.nil? )
 				{ :error => "404" , :url => url }.to_json
 			else
-				{ :response => p.parsed , :url => url }.to_json
+				{ :response => p.parsed , :images => p.images , :url => url }.to_json
 			end
 		end
 	end
