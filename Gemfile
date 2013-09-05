@@ -11,5 +11,3 @@ gem 'multi_json'
 gem 'ruby-readability'
 
 gem 'unicorn'
-
-gem 'fastimage'
